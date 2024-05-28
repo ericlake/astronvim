@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- Customize Mason plugins
 
@@ -13,6 +13,11 @@ return {
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
         "lua_ls",
         -- add more arguments for adding more language servers
+        "gopls",
+        "marksman",
+        "pylsp",
+        "ruff_lsp",
+        "rust_analyzer",
       })
     end,
   },
@@ -25,6 +30,17 @@ return {
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
         "stylua",
         -- add more arguments for adding more null-ls sources
+        "ansible-language-server",
+        "bash-language-server",
+        "black",
+        "goimports",
+        "isort",
+        "mdformat",
+        "mypy",
+        "terraform-ls",
+        "typescript-language-server",
+        "jq",
+        "prettier",
       })
     end,
   },
@@ -36,6 +52,8 @@ return {
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
         "python",
         -- add more arguments for adding more debuggers
+        "codelldb",
+        "debugpy",
       })
     end,
   },
