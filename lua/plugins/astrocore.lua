@@ -27,7 +27,7 @@ return {
     -- vim options can be configured here
     options = {
       opt = { -- vim.opt.<key>
-        relativenumber = true, -- sets vim.opt.relativenumber
+        relativenumber = false, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
@@ -37,6 +37,9 @@ return {
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
+      },
+      o = {
+        scrolloff = 15,
       },
     },
     -- Mappings can be configured through AstroCore as well.
@@ -59,6 +62,11 @@ return {
           end,
           desc = "Close buffer from tabline",
         },
+        -- Terramate commands
+        ["<leader>M"] = { name = "Terramate" },
+        ["<leader>Mg"] = { "<cmd>Terramate generate<cr>", desc = "Terramate generate" },
+        ["<leader>Ml"] = { "<cmd>Terramate list<cr>", desc = "Terramate list" },
+        ["<leader>Mf"] = { "<cmd>TerramateFmt<cr>", desc = "Run Terramatefmt on code" },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
