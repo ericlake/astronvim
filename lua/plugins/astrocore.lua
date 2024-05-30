@@ -29,9 +29,9 @@ return {
       opt = { -- vim.opt.<key>
         relativenumber = false, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
-        spell = false, -- sets vim.opt.spell
+        spell = true, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
-        wrap = false, -- sets vim.opt.wrap
+        wrap = true, -- sets vim.opt.wrap
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -62,6 +62,9 @@ return {
           end,
           desc = "Close buffer from tabline",
         },
+        -- Save All
+        ["<Leader>W"] = { "<Cmd>wa<CR>", desc = "Save All" },
+
         -- Terramate commands
         ["<leader>M"] = { name = "Terramate" },
         ["<leader>Mg"] = { "<cmd>Terramate generate<cr>", desc = "Terramate generate" },
