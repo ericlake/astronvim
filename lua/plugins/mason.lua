@@ -15,7 +15,7 @@ return {
         -- add more arguments for adding more language servers
         "gopls",
         "marksman",
-        "pylsp",
+        "pyright",
         "ruff_lsp",
         "rust_analyzer",
       })
